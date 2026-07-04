@@ -2,25 +2,70 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import {
   ArrowLeft,
   Star,
- 
   Phone,
   MessageCircle,
 } from "lucide-react";
-
-import { getPuja, PUJAS } from "../data/pujas";
+import { useEffect, useState } from "react";
+import api from "../admin/services/api";
 
 export default function PujaDetails() {
-  const { slug } = useParams();
+  const { id } = useParams();
 
-  const puja = getPuja(slug);
+  const [loading, setLoading] = useState(true);
+  const [puja, setPuja] = useState(null);
+  const [related, setRelated] = useState([]);
 
-  if (!puja) {
-    return <Navigate to="/" replace />;
+  useEffect(() => {
+    fetchPuja();
+  }, [id]);
+
+  const fetchPuja = async () => {
+    try {
+      const res = await api.get("/pujas");
+
+      const list = res.data.data.map((item) => ({
+        ...item,
+        image: item.image
+          ? `http://localhost:5000${item.image}`
+          : "/placeholder.jpg",
+      }));
+
+      const current = list.find(
+        (item) => item.id.toString() === id
+      );
+
+      if (!current) {
+        setLoading(false);
+        return;
+      }
+
+      setPuja(current);
+
+      setRelated(
+        list
+          .filter((item) => item.id !== current.id)
+          .slice(0, 3)
+      );
+
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="py-32 text-center text-2xl">
+        Loading...
+      </div>
+    );
   }
 
-  const related = PUJAS.filter(
-    (p) => p.slug !== puja.slug
-  ).slice(0, 3);
+  if (!puja) {
+    return <Navigate to="/services" replace />;
+  }
+
   return (
     <div className="bg-background pt-28 pb-20">
 
@@ -81,18 +126,16 @@ export default function PujaDetails() {
 
             </div>
 
-<div className="mt-8 space-y-5">
-               
+            <div className="mt-8 space-y-5">
 
-             
               <div className="grid gap-4 sm:grid-cols-2">
 
-              <Link
-to={`/book-puja/${puja.slug}`}
-  className="inline-flex items-center justify-center rounded-full bg-gradient-saffron px-7 py-4 text-base font-semibold text-white shadow-gold transition hover:scale-[1.02]"
->
-  Book Now
-</Link>
+                <Link
+                  to={`/book-puja/${puja.id}`}
+                  className="inline-flex items-center justify-center rounded-full bg-gradient-saffron px-7 py-4 text-base font-semibold text-white shadow-gold transition hover:scale-[1.02]"
+                >
+                  Book Now
+                </Link>
 
                 <a
                   href="tel:+918191836767"
@@ -111,17 +154,18 @@ to={`/book-puja/${puja.slug}`}
                   <MessageCircle className="h-5 w-5" />
                   WhatsApp
                 </a>
-</div>   {/* grid buttons */}
 
-</div>   {/* right */}
+              </div>
 
-</div>   {/* lg:grid-cols-2 */}
+            </div>
 
-</div>   {/* container-luxe */}
+          </div>
 
-</div>   {/* main wrapper */}
+        </div>
 
-{/* ABOUT PUJA */}            {/* ABOUT PUJA */}
+      </div>
+
+      {/* ABOUT PUJA */}
 
       <section className="py-20">
 
@@ -152,11 +196,11 @@ to={`/book-puja/${puja.slug}`}
             <div>
 
               <p className="text-lg leading-9 text-muted-foreground">
-                {puja.intro}
+                {puja.intro || "No description available."}
               </p>
 
               <p className="mt-6 leading-8 text-muted-foreground">
-                {puja.importance}
+                {puja.importance || ""}
               </p>
 
             </div>
@@ -184,17 +228,15 @@ to={`/book-puja/${puja.slug}`}
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
 
-            {puja.benefits.map((benefit) => (
+            {(puja.benefits || []).map((benefit, index) => (
 
               <div
-                key={benefit}
+                key={index}
                 className="rounded-[1.7rem] border border-border bg-card p-7 transition hover:-translate-y-1 hover:shadow-luxe"
               >
 
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-saffron text-white">
-
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-saffron text-white text-xl font-bold">
                   ✓
-
                 </div>
 
                 <p className="mt-6 text-base leading-7">
@@ -210,9 +252,8 @@ to={`/book-puja/${puja.slug}`}
         </div>
 
       </section>
-            
-          
-            {/* RELATED PUJAS */}
+
+      {/* RELATED PUJAS */}
 
       <section className="py-20">
 
@@ -230,13 +271,13 @@ to={`/book-puja/${puja.slug}`}
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-            {related.map((item)=>(
+            {related.map((item) => (
 
               <Link
-  key={item.slug}
-  to={`/pujas/${item.slug}`}
-  className="overflow-hidden rounded-[2rem] border border-border bg-card transition hover:-translate-y-1 hover:shadow-luxe"
->
+                key={item.id}
+                to={`/pujas/${item.id}`}
+                className="overflow-hidden rounded-[2rem] border border-border bg-card transition hover:-translate-y-1 hover:shadow-luxe"
+              >
 
                 <img
                   src={item.image}

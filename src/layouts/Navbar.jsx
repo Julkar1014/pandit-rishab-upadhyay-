@@ -5,8 +5,8 @@ import { Menu, Phone, X } from "lucide-react";
 const NAV = [
   { label: "Home", to: "/" },
   { label: "Pujas", to: "/services" },
+  { label: "Reviews", to: "/reviews" },
   { label: "About", to: "/about" },
-  { label: "Pandit Ji", to: "/pandit-ji" },
   { label: "Contact", to: "/contact" },
 ];
 
@@ -108,7 +108,6 @@ export default function Navbar() {
                 </a>
               <Link
   to="/services#services"
-  onClick={() => setOpen(false)}
   onClick={() => setOpen(false)}
   className="inline-flex items-center justify-center rounded-xl bg-gradient-saffron px-3 py-3 text-sm font-semibold text-primary-foreground"
 >

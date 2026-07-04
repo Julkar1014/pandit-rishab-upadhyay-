@@ -1,0 +1,462 @@
+/* ==========================================
+   ADD PUJA PAGE
+========================================== */
+
+.add-puja-page{
+    padding:30px;
+    background:#f8f9fb;
+    min-height:100vh;
+}
+
+/* ==========================================
+   PAGE TITLE
+========================================== */
+
+.add-puja-page h1{
+    font-size:32px;
+    color:#222;
+    font-weight:700;
+    margin-bottom:30px;
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.add-puja-form{
+    background:#fff;
+    border-radius:18px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    border:1px solid #ececec;
+}
+
+/* ==========================================
+   FORM GROUP
+========================================== */
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:22px;
+}
+
+.form-group label{
+    font-size:15px;
+    font-weight:600;
+    color:#333;
+    margin-bottom:8px;
+}
+
+/* ==========================================
+   INPUT
+========================================== */
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:13px 15px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+    background:#fff;
+}
+
+.form-group textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:#ff7a00;
+    box-shadow:0 0 0 4px rgba(255,122,0,.12);
+}
+
+/* ==========================================
+   CHECKBOX
+========================================== */
+
+.checkbox-group{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:25px 0;
+}
+
+.checkbox-group input{
+    width:18px;
+    height:18px;
+}
+
+.checkbox-group label{
+    font-weight:600;
+    color:#333;
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.section-title{
+    font-size:24px;
+    font-weight:700;
+    color:#222;
+    margin:40px 0 20px;
+    border-left:5px solid #ff7a00;
+    padding-left:12px;
+}
+/* ==========================================
+   DYNAMIC ITEM BOX
+========================================== */
+
+.dynamic-card{
+    background:#fff;
+    border:1px solid #ececec;
+    border-radius:14px;
+    padding:18px;
+    margin-bottom:18px;
+    box-shadow:0 4px 12px rgba(0,0,0,.04);
+}
+
+/* ==========================================
+   FLEX INPUT ROW
+========================================== */
+
+.flex-row{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin-bottom:12px;
+}
+
+.flex-row input{
+    flex:1;
+}
+
+/* ==========================================
+   PROCEDURE CARD
+========================================== */
+
+.procedure-card{
+    background:#fafafa;
+    border:1px solid #e5e5e5;
+    border-radius:14px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.procedure-card textarea{
+    margin-top:12px;
+}
+
+/* ==========================================
+   FAQ CARD
+========================================== */
+
+.faq-card{
+    background:#fafafa;
+    border:1px solid #e8e8e8;
+    border-radius:14px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.faq-card textarea{
+    margin-top:12px;
+}
+
+/* ==========================================
+   ADD BUTTON
+========================================== */
+
+.add-btn{
+    background:#ff7a00;
+    color:#fff;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.add-btn:hover{
+    background:#e66d00;
+    transform:translateY(-2px);
+}
+
+/* ==========================================
+   REMOVE BUTTON
+========================================== */
+
+.remove-btn{
+    background:#ef4444;
+    color:#fff;
+    border:none;
+    padding:10px 16px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.remove-btn:hover{
+    background:#dc2626;
+}
+
+/* ==========================================
+   FORM ACTIONS
+========================================== */
+
+.form-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin-top:40px;
+}
+
+/* ==========================================
+   SAVE BUTTON
+========================================== */
+
+.save-btn{
+    background:#ff7a00;
+    color:#fff;
+    border:none;
+    padding:14px 28px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.save-btn:hover{
+    background:#e66d00;
+    transform:translateY(-2px);
+}
+
+.save-btn:disabled{
+    background:#bdbdbd;
+    cursor:not-allowed;
+    transform:none;
+}
+
+/* ==========================================
+   CANCEL BUTTON
+========================================== */
+
+.cancel-btn{
+    background:#f3f3f3;
+    color:#444;
+    border:none;
+    padding:14px 28px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.cancel-btn:hover{
+    background:#e5e5e5;
+}
+/* ==========================================
+   HORIZONTAL LINE
+========================================== */
+
+.add-puja-form hr{
+    border:none;
+    border-top:1px solid #ececec;
+    margin:35px 0;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f2f2f2;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff7a00;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#e66d00;
+}
+
+/* Firefox */
+
+*{
+    scrollbar-width:thin;
+    scrollbar-color:#ff7a00 #f2f2f2;
+}
+
+/* ==========================================
+   INPUT PLACEHOLDER
+========================================== */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+    color:#999;
+}
+
+/* ==========================================
+   BUTTON ANIMATION
+========================================== */
+
+.add-btn,
+.remove-btn,
+.save-btn,
+.cancel-btn{
+    transition:all .25s ease;
+}
+
+.add-btn:active,
+.remove-btn:active,
+.save-btn:active{
+    transform:scale(.97);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:992px){
+
+    .add-puja-page{
+        padding:20px;
+    }
+
+    .add-puja-form{
+        padding:25px;
+    }
+
+    .add-puja-page h1{
+        font-size:28px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .add-puja-page{
+        padding:15px;
+    }
+
+    .add-puja-form{
+        padding:20px;
+        border-radius:15px;
+    }
+
+    .flex-row{
+        flex-direction:column;
+        align-items:stretch;
+        gap:10px;
+    }
+
+    .flex-row input{
+        width:100%;
+    }
+
+    .form-actions{
+        flex-direction:column;
+    }
+
+    .save-btn,
+    .cancel-btn{
+        width:100%;
+    }
+
+    .section-title{
+        font-size:21px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .add-puja-page h1{
+        font-size:24px;
+    }
+
+    .form-group label{
+        font-size:14px;
+    }
+
+    .form-group input,
+    .form-group textarea{
+        padding:12px;
+        font-size:14px;
+    }
+
+    .section-title{
+        font-size:19px;
+    }
+
+    .add-btn,
+    .remove-btn{
+        width:100%;
+    }
+
+    .procedure-card,
+    .faq-card,
+    .dynamic-card{
+        padding:15px;
+    }
+
+}
+
+/* ==========================================
+   SMOOTH EFFECT
+========================================== */
+
+.form-group input,
+.form-group textarea,
+.procedure-card,
+.faq-card,
+.dynamic-card{
+    transition:all .25s ease;
+}
+
+.procedure-card:hover,
+.faq-card:hover,
+.dynamic-card:hover{
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transform:translateY(-2px);
+}
+
+/* ==========================================
+   FORM FADE EFFECT
+========================================== */
+
+.add-puja-form{
+    animation:fadeUp .4s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
