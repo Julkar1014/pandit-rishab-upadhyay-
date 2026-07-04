@@ -63,6 +63,11 @@ export default function App() {
           element={<Login />}
         />
 
+        <Route
+  path="/test"
+  element={<h1 style={{color:"red"}}>TEST ROUTE WORKING</h1>}
+/>
+
         {/* Dashboard */}
 
         <Route
