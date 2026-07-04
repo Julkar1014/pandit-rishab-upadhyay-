@@ -23,7 +23,7 @@ export default function WhyUs() {
       <div className="container-luxe">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.5fr] lg:gap-20">
           <div className="lg:sticky lg:top-32 lg:self-start">
-<div className="eyebrow">Why Pandit Rishab Upadhyay</div>
+<div className="eyebrow">Why Pandit Rishabh Upadhyay</div>
             <h2 className="mt-3 font-display text-4xl leading-tight md:text-5xl lg:text-6xl">
               The difference is in the <span className="text-gradient-gold">devotion.</span>
             </h2>

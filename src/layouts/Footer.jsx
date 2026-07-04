@@ -30,7 +30,7 @@ export default function Footer() {
               </span>
               <div>
                 <div className="font-display text-2xl font-semibold">
-                  PANDIT <span className="text-gradient-gold">RISHAB UPADHYAY</span>
+                  PANDIT <span className="text-gradient-gold">RISHABH UPADHYAY</span>
                 </div>
                 <div className="text-[10px] uppercase tracking-[0.28em] text-cream/60">
                   Sacred · Verified · Vedic
@@ -44,7 +44,7 @@ export default function Footer() {
             <div className="mt-6 flex items-center gap-3">
 
   <a
-    href="https://www.instagram.com/vedaachayra_rishabhupadhyay"
+    href="https://www.instagram.com/vedaachayra_rishabh upadhyay"
     target="_blank"
     rel="noopener noreferrer"
     className="grid h-10 w-10 place-items-center rounded-full border border-cream/15 text-cream/80 transition hover:border-gold hover:text-gold"
@@ -110,7 +110,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-cream/10 pt-6 text-xs text-cream/60 sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} Pandit Rishab Upadhyay. All sacred rights reserved.</p>
+          <p>© {new Date().getFullYear()} Pandit Rishabh Upadhyay. All sacred rights reserved.</p>
           <p className="font-deva text-base text-gold/80">सर्वे भवन्तु सुखिनः</p>
         </div>
       </div>

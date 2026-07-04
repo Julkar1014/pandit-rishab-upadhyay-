@@ -9,7 +9,7 @@ import pandit1 from "../../assets/pandit-1.jpg";
 export default function Pandits() {
   const list = [
     {
-      name: "Pandit Rishab upadhyay",
+      name: "Pandit Rishabh upadhyay",
       exp: "8+ Years",
       lang: "Hindi • Sanskrit",
       spec: "Vivah • Griha Pravesh • Rudrabhishek • Satyanarayan",

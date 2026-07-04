@@ -20,7 +20,7 @@ export default function PujaVideo() {
 
           <p className="mt-5 text-lg leading-8 text-muted-foreground">
             Experience authentic Vedic rituals performed by
-            <strong> Pandit Rishab Upadhyay</strong>
+            <strong> Pandit Rishabh Upadhyay</strong>
             across Noida, Greater Noida and Delhi NCR.
           </p>
 

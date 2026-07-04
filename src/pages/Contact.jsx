@@ -19,7 +19,7 @@ export default function Contact() {
           <div className="eyebrow text-gold">Contact Us</div>
          <h1 className="mt-4 font-display text-4xl leading-tight md:text-7xl">
             Book Your Puja with<br />
-            <span className="text-gradient-gold">Pandit Rishab Upadhyay.</span>
+            <span className="text-gradient-gold">Pandit Rishabh Upadhyay.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-cream/75">
 Need a Pandit Ji for Griha Pravesh, Satyanarayan Katha,
@@ -85,7 +85,7 @@ Greater Noida and Delhi NCR.          </p>
           <div className="space-y-4">
             <ContactCard icon={<Phone className="h-5 w-5" />} title="Call our concierge" line="+91 81918 36767" sub="Available 24 hours · All days" href="tel:+918191836767" />
             <ContactCard icon={<MessageCircle className="h-5 w-5" />} title="WhatsApp" line="+91 81918 36767" sub="Quickest way to reach us" href="https://wa.me/918191836767" />
-            <ContactCard icon={<Mail className="h-5 w-5" />} title="Email" line="panditrishabupadhyay@gmail.com" sub="Replies within 2 hours" href="panditrishabupadhyay@gmail.com" />
+            <ContactCard icon={<Mail className="h-5 w-5" />} title="Email" line="panditRishabh Upadhyay@gmail.com" sub="Replies within 2 hours" href="panditRishabh Upadhyay@gmail.com" />
             <ContactCard icon={<MapPin className="h-5 w-5" />} title="Service Areas" line="Noida • Greater Noida • Delhi NCR" sub="Home Puja Service Available" href="#" />
             <div className="overflow-hidden rounded-2xl border border-border bg-card">
               <iframe

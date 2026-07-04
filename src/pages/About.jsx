@@ -35,7 +35,7 @@ export default function About() {
             <div>
 
               <div className="eyebrow text-gold">
-                About Pandit Rishab Upadhyay
+                About Pandit Rishabh Upadhyay
               </div>
 
               <h1 className="mt-5 font-display text-5xl leading-tight md:text-7xl">
@@ -48,7 +48,7 @@ export default function About() {
               </h1>
 
               <p className="mt-8 max-w-xl text-lg leading-8 text-cream/75">
-                Pandit Rishab Upadhyay provides trusted Vedic Pandit Ji for all Hindu
+                Pandit Rishabh Upadhyay provides trusted Vedic Pandit Ji for all Hindu
                 rituals including Griha Pravesh, Satyanarayan Katha,
                 Rudrabhishek, Marriage, Havan and many more across Noida,
                 Greater Noida & Delhi NCR.
@@ -126,7 +126,7 @@ export default function About() {
               </h2>
 
               <p className="mt-8 leading-8 text-muted-foreground">
-              Pandit Rishab Upadhyay is dedicated to making authentic Vedic rituals easily accessible for every Hindu family. Whether it's a Griha Pravesh, Marriage, Satyanarayan Katha or any sacred ceremony, every ritual is performed with complete devotion and according to the Vedic scriptures.
+              Pandit Rishabh Upadhyay is dedicated to making authentic Vedic rituals easily accessible for every Hindu family. Whether it's a Griha Pravesh, Marriage, Satyanarayan Katha or any sacred ceremony, every ritual is performed with complete devotion and according to the Vedic scriptures.
               </p>
 
               <p className="mt-6 leading-8 text-muted-foreground">
@@ -197,7 +197,7 @@ export default function About() {
             <h2 className="mt-4 font-display text-4xl md:text-5xl">
               Why Thousands of Families
               <span className="text-gradient-gold">
-                {" "}TrustPandit Rishab Upadhyay
+                {" "}TrustPandit Rishabh Upadhyay
               </span>
             </h2>
 
@@ -296,12 +296,12 @@ export default function About() {
               <h2 className="mt-4 font-display text-5xl">
                Pandit
                 <span className="text-gradient-gold">
-                  {" "}Rishab Upadhyay
+                  {" "}Rishabh Upadhyay
                 </span>
               </h2>
 
               <p className="mt-7 leading-8 text-muted-foreground">
-                Pandit Rishab Upadhyay has years of experience in performing all major Hindu rituals with complete devotion, proper Vedic traditions and spiritual guidance across Noida, Greater Noida and Delhi NCR.
+                Pandit Rishabh Upadhyay has years of experience in performing all major Hindu rituals with complete devotion, proper Vedic traditions and spiritual guidance across Noida, Greater Noida and Delhi NCR.
               </p>
 
               <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -410,7 +410,7 @@ export default function About() {
           <h2 className="mt-4 font-display text-4xl md:text-6xl">
             Book Your Puja
             <span className="text-gradient-gold">
-              {" "}with Pandit Rishab Upadhyay
+              {" "}with Pandit Rishabh Upadhyay
             </span>
           </h2>
 
