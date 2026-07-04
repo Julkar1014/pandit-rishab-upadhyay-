@@ -81,7 +81,11 @@ background:#fff;
 
 border-radius:18px;
 
-overflow:hidden;
+overflow-x:auto;
+
+overflow-y:hidden;
+
+-webkit-overflow-scrolling:touch;
 
 box-shadow:0 10px 30px rgba(0,0,0,.05);
 
@@ -92,6 +96,8 @@ border:1px solid #ececec;
 .bookings-table{
 
 width:100%;
+
+min-width:900px;
 
 border-collapse:collapse;
 
@@ -710,4 +716,172 @@ grid-template-columns:1fr;
 
 }
 
+}
+
+@media (max-width:768px){
+
+.bookings-table-wrapper{
+
+overflow-x:auto;
+
+}
+
+.bookings-table{
+
+min-width:900px;
+
+}
+
+}
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media (max-width:1200px){
+
+.bookings-table-wrapper{
+overflow-x:auto;
+}
+
+.bookings-table{
+min-width:1000px;
+}
+
+}
+
+@media (max-width:992px){
+
+.bookings-page{
+padding:20px;
+}
+
+.bookings-page h1{
+font-size:28px;
+}
+
+}
+
+@media (max-width:768px){
+
+.bookings-page{
+padding:16px;
+}
+
+.bookings-page h1{
+font-size:24px;
+}
+
+.bookings-table-wrapper{
+overflow-x:auto;
+-webkit-overflow-scrolling:touch;
+border-radius:12px;
+}
+
+.bookings-table{
+min-width:900px;
+}
+
+.bookings-table th,
+.bookings-table td{
+padding:12px;
+font-size:13px;
+}
+
+.action-buttons{
+display:flex;
+gap:8px;
+}
+
+.details-btn{
+height:36px;
+padding:0 14px;
+font-size:12px;
+border-radius:8px;
+}
+
+.booking-modal{
+padding:20px;
+border-radius:14px;
+}
+
+.booking-modal h2{
+font-size:22px;
+}
+
+.close-modal{
+width:36px;
+height:36px;
+font-size:16px;
+}
+
+}
+
+@media (max-width:576px){
+
+.bookings-page{
+padding:12px;
+}
+
+.bookings-page h1{
+font-size:22px;
+}
+
+.bookings-table{
+min-width:850px;
+}
+
+.booking-modal{
+padding:18px;
+}
+
+.booking-modal h2{
+font-size:20px;
+}
+
+.detail-item{
+padding:12px;
+}
+
+.detail-item span{
+font-size:12px;
+}
+
+.detail-item strong{
+font-size:14px;
+}
+
+.loading-box,
+.empty-state{
+padding:40px 15px;
+}
+
+}
+
+/* ===========================
+   CUSTOM SCROLLBAR
+=========================== */
+
+.bookings-table-wrapper::-webkit-scrollbar{
+height:8px;
+}
+
+.bookings-table-wrapper::-webkit-scrollbar-track{
+background:#f4f4f4;
+border-radius:20px;
+}
+
+.bookings-table-wrapper::-webkit-scrollbar-thumb{
+background:#2563eb;
+border-radius:20px;
+}
+
+.bookings-table-wrapper::-webkit-scrollbar-thumb:hover{
+background:#1d4ed8;
+}
+
+/* Firefox */
+
+.bookings-table-wrapper{
+scrollbar-width:thin;
+scrollbar-color:#2563eb #f4f4f4;
 }
