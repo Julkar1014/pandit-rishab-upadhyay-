@@ -49,11 +49,11 @@ export default function BookPuja() {
       }
 
       setPuja({
-        ...found,
-        image: found.image
-          ? `http://localhost:5000${found.image}`
-          : "/placeholder.jpg",
-      });
+  ...found,
+  image: found.image
+    ? `https://darkorchid-curlew-311953.hostingersite.com${found.image}`
+    : "/placeholder.jpg",
+});
     } catch (err) {
       console.log(err);
     } finally {

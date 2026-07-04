@@ -23,12 +23,12 @@ export default function PujaDetails() {
     try {
       const res = await api.get("/pujas");
 
-      const list = res.data.data.map((item) => ({
-        ...item,
-        image: item.image
-          ? `http://localhost:5000${item.image}`
-          : "/placeholder.jpg",
-      }));
+   const list = res.data.data.map((item) => ({
+  ...item,
+  image: item.image
+    ? `https://darkorchid-curlew-311953.hostingersite.com${item.image}`
+    : "/placeholder.jpg",
+}));
 
       const current = list.find(
         (item) => item.id.toString() === id

@@ -19,12 +19,14 @@ export default function Services() {
     try {
       const res = await api.get("/pujas");
 
-      const data = res.data.data.map((p) => ({
-        ...p,
-        image: p.image
-          ? `http://localhost:5000${p.image}`
-          : "/placeholder.jpg",
-      }));
+      const API_URL = "https://darkorchid-curlew-311953.hostingersite.com";
+
+const data = res.data.data.map((p) => ({
+  ...p,
+  image: p.image
+    ? `${API_URL}${p.image}`
+    : "/placeholder.jpg",
+}));
 
       setPujas(data);
     } catch (err) {
