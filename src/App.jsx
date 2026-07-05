@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Reviews from "./pages/Reviews";
 import PujaDetails from "./pages/PujaDetails";
 import BookPuja from "./pages/BookPuja";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Admin
 import ProtectedRoute from "./admin/components/ProtectedRoute";
@@ -21,6 +22,7 @@ import AddPuja from "./admin/pages/AddPuja";
 import Bookings from "./admin/pages/Bookings";
 import AdminReviews from "./admin/pages/Reviews";
 import Settings from "./admin/pages/Settings";
+import { Scroll } from "lucide-react";
 
 function WebsiteLayout() {
   return (
@@ -35,6 +37,7 @@ function WebsiteLayout() {
 export default function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
 
         {/* Website Routes */}
