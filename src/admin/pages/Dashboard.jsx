@@ -11,26 +11,32 @@ export default function Dashboard() {
     pending: 0,
   });
 
+
   useEffect(() => {
     loadDashboard();
   }, []);
 
-  const loadDashboard = async () => {
-    try {
+  const admin = JSON.parse(localStorage.getItem("admin"));
+const firstName = admin?.name?.split(" ")[0] || "Admin";
 
-      const pujas = await api.get("/pujas");
+const loadDashboard = async () => {
+  try {
+    const [pujas, bookings, reviews] = await Promise.all([
+      api.get("/pujas"),
+      api.get("/bookings"),
+      api.get("/reviews"),
+    ]);
 
-      setStats({
-        pujas: pujas.data.data.length,
-        bookings: 0,
-        reviews: 0,
-        pending: 0,
-      });
+    setStats({
+      pujas: pujas.data.data.length,
+      bookings: bookings.data.data.length,
+      reviews: reviews.data.data.length,
+    });
 
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  } catch (err) {
+    console.log(err);
+  }
+};
 
   return (
     <div className="dashboard">
@@ -38,10 +44,9 @@ export default function Dashboard() {
       <h1 className="dashboard-title">
         Dashboard
       </h1>
-
-      <p className="dashboard-subtitle">
-        Welcome Back Admin 👋
-      </p>
+<p className="dashboard-subtitle">
+  Welcome Back {firstName} 👋
+</p>
 
       <div className="stats-grid">
 
@@ -53,11 +58,6 @@ export default function Dashboard() {
         <div className="stat-card">
           <h3>Total Bookings</h3>
           <h1>{stats.bookings}</h1>
-        </div>
-
-        <div className="stat-card">
-          <h3>Pending Bookings</h3>
-          <h1>{stats.pending}</h1>
         </div>
 
         <div className="stat-card">
