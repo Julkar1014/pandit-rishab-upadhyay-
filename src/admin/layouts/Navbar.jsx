@@ -1,6 +1,10 @@
 import { Menu } from "lucide-react";
 
 export default function Navbar({ openSidebar }) {
+
+  const admin = JSON.parse(localStorage.getItem("admin"));
+  const firstName = admin?.name?.split(" ")[0] || "Admin";
+
   return (
     <header className="admin-navbar">
 
@@ -14,7 +18,7 @@ export default function Navbar({ openSidebar }) {
       <h2>Admin Dashboard</h2>
 
       <div className="admin-user">
-        👤 Admin
+        👤 {firstName}
       </div>
 
     </header>
