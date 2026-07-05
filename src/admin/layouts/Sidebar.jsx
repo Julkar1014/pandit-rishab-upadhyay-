@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   LayoutDashboard,
   BookOpen,
@@ -11,6 +12,9 @@ import {
 
 export default function Sidebar({ open, closeSidebar }) {
   const location = useLocation();
+  const navigate = useNavigate();
+
+const admin = JSON.parse(localStorage.getItem("admin"));
 
   const menus = [
     {
@@ -39,6 +43,12 @@ export default function Sidebar({ open, closeSidebar }) {
       icon: <Settings size={20} />,
     },
   ];
+  const handleLogout = () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("admin");
+
+  navigate("/admin/login");
+};
 
   return (
     <>
@@ -57,7 +67,7 @@ export default function Sidebar({ open, closeSidebar }) {
 
         <div className="sidebar-top">
 
-          <h2>Pandit Admin</h2>
+          <h2>{admin?.name || "Admin"}</h2>
 
           <button
             className="close-btn"
@@ -90,11 +100,10 @@ export default function Sidebar({ open, closeSidebar }) {
 
         <div className="sidebar-footer">
 
-          <button>
-            <LogOut size={20} />
-            Logout
-          </button>
-
+         <button onClick={handleLogout}>
+  <LogOut size={20} />
+  Logout
+</button>
         </div>
 
       </aside>
