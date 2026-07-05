@@ -6,6 +6,7 @@ export default function Reviews() {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
 const [showForm, setShowForm] = useState(false);
+const [showAll, setShowAll] = useState(false);
 
 const [formData, setFormData] = useState({
   name: "",
@@ -85,7 +86,7 @@ const handleSubmit = async (e) => {
                   </p>
                 </div>
               ) : (
-                                reviews.slice(0, 3).map((review) => (
+                               (showAll ? reviews : reviews.slice(0, 3)).map((review) => (
                   <div className="review-card" key={review.id}>
 
                     <div className="stars">
@@ -111,9 +112,12 @@ const handleSubmit = async (e) => {
             <div className="review-actions">
 
               {reviews.length > 3 && (
-                <button className="view-btn">
-                  View All Reviews
-                </button>
+               <button
+  className="view-btn"
+  onClick={() => setShowAll(!showAll)}
+>
+  {showAll ? "Show Less" : "View All Reviews"}
+</button>
               )}
 
               <button
